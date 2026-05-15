@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f2f2f2;
+      }
+
+      .login-box {
+        background: white;
+        padding: 30px;
+        border-radius: 10px;
+        width: 300px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      input:focus {
+        outline: none;
+        border: 3px solid blue;
+        background-color: #e6f0ff;
+      }
+
+      h2 {
+        text-align: center;
+      }
+
+      input {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        margin-bottom: 15px;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+      }
+
+      .error {
+        border-color: red;
+        background-color: #ffe6e6;
+      }
+
+      button {
+        width: 100%;
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #0056b3;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="login-box">
+      <h2>Login</h2>
+
+      <input type="text" id="username" placeholder="Enter username" />
+
+      <input
+        type="password"
+        id="password"
+        placeholder="Enter password"
+        disabled
+      />
+
+      <button onclick="login()">Login</button>
+    </div>
+
+    <script>
+      const correctUsername = "admin";
+      const correctPassword = "123456";
+
+      const usernameInput = document.getElementById("username");
+      const passwordInput = document.getElementById("password");
+
+      usernameInput.addEventListener("keydown", function (event) {
+        if (event.key === "Tab") {
+          if (usernameInput.value !== correctUsername) {
+            event.preventDefault();
+
+            alert("Invalid username");
+
+            usernameInput.classList.add("error");
+
+            usernameInput.focus();
+          } else {
+            usernameInput.classList.remove("error");
+
+            usernameInput.disabled = true;
+
+            passwordInput.disabled = false;
+          }
+        }
+      });
+
+      passwordInput.addEventListener("keydown", function (event) {
+        if (event.key === "Tab") {
+          if (passwordInput.value !== correctPassword) {
+            event.preventDefault();
+
+            alert("Incorrect password");
+
+            passwordInput.classList.add("error");
+
+            passwordInput.focus();
+          } else {
+            passwordInput.classList.remove("error");
+          }
+        }
+      });
+
+      usernameInput.addEventListener("focus", function () {
+        usernameInput.select();
+      });
+
+      passwordInput.addEventListener("focus", function () {
+        passwordInput.select();
+      });
+
+      function login() {
+        const username = usernameInput.value;
+        const password = passwordInput.value;
+
+        if (username !== correctUsername) {
+          alert("Invalid username");
+          usernameInput.classList.add("error");
+          return;
+        }
+
+        if (password !== correctPassword) {
+          alert("Incorrect password");
+          passwordInput.classList.add("error");
+          return;
+        }
+
+        alert("Login Successful");
+
+        window.location.href = "/welcome.html";
+      }
+    </script>
+  </body>
+</html>

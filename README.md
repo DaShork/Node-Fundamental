@@ -1,16 +1,16 @@
-# Node Fundamental 🚀
+# Node Fundamental
 
 Repository này được tạo ra để học và thực hành các kiến thức nền tảng về **Node.js**, bao gồm cách xây dựng server, xử lý request/response và làm việc với các công nghệ liên quan đến backend development.
 
 ---
 
-# 📂 Project Structure
+# Project Structure
 
 ```bash
 Node-Fundamental/
 │
 ├── SDN302/
-│   └── Các bài học và project cho môn:
+│   └── Các bài học và project cho môn SDN302:
 │       Server-Side Development with NodeJS, Express, and MongoDB
 │
 ├── Node-myself/
@@ -22,9 +22,9 @@ Node-Fundamental/
 
 ---
 
-# 📘 Folders Description
+# Folders Description
 
-## 📁 SDN302
+## SDN302
 
 Folder dành cho môn học **SDN302** — _Server-Side Development with NodeJS, Express, and MongoDB_.
 
@@ -41,7 +41,7 @@ Folder dành cho môn học **SDN302** — _Server-Side Development with NodeJS,
 
 ---
 
-## 📁 Node-myself
+## Node-myself
 
 Folder chứa các project tự học, thử nghiệm và thực hành cá nhân.
 
@@ -61,7 +61,7 @@ Folder chứa các project tự học, thử nghiệm và thực hành cá nhân
 
 ---
 
-# 🛠 Technologies
+# Technologies
 
 Các công nghệ sẽ được sử dụng trong repo này:
 
@@ -76,7 +76,7 @@ Các công nghệ sẽ được sử dụng trong repo này:
 
 ---
 
-# 🎯 Purpose
+# Purpose
 
 Repository này được dùng để:
 
@@ -87,7 +87,7 @@ Repository này được dùng để:
 
 ---
 
-# 📌 Notes
+# Notes
 
 - Đây là repository phục vụ cho mục đích học tập và thực hành.
 - Cấu trúc folder có thể thay đổi theo từng giai đoạn học.
@@ -95,6 +95,6 @@ Repository này được dùng để:
 
 ---
 
-# ✨ Author
+# Author
 
 Made with ☕ and countless debugging sessions by **DaShork**

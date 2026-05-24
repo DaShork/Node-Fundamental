@@ -3,19 +3,13 @@ const express = require("express");
 const hostname = "localhost";
 const port = 5000;
 const app = express();
-const arsenalRouter = require("./asernalRouter");
+const articleRouter = require("./articleRouter");
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use("/asrenal", arsenalRouter);
+app.use("/article", articleRouter);
 
-// app.use(
-//   (req, res) => (
-//     (res.statusCode = 200),
-//     res.setHeader("Content-Type", "text/html"),
-//     res.end("<h1> Hello World </h1>")
-//   ),
-// );
+
 const server = http.createServer(app);
 server.listen(port, hostname, () =>
   console.log(`Server running at http://${hostname}:${port}/`),
